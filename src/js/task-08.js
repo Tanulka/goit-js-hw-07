@@ -7,6 +7,10 @@ btnRenderEl.addEventListener('click', handleClick);
 btnDestroyEl.addEventListener('click', destroyBoxes);
 
 function handleClick() {
+  if (divBoxesEl !== 0) {
+    divBoxesEl.innerHTML = '';
+  }
+
   createBoxes(Number.parseInt(inputEl.value, 10));
 }
 
